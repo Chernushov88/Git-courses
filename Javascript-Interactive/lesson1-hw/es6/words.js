@@ -20,18 +20,12 @@ function* getWords(str) {
     let text = cleanStr(str);
     let start = 0;
     let current = text.indexOf(' ', start);
-    console.log(current)
-
-    // return cleanStr(str).split(' ');
-
+    console.log(current);
     while(current !== -1){
          yield text.substr(start, current - start);
          start = current + 1;
          current = text.indexOf(' ', start)
     }
-
-
-
 }
 /*global Symbol*/
 /*
