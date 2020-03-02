@@ -1,8 +1,6 @@
-import 'babel-polyfill';
-
-import {watchObj, EmailParser} from './hw';
-
-var parser = new EmailParser('chernushov88@gmail.com');
+import {watchObj, EmailParser} from './lesson2-hw/hw';
+document.title = '2- hw';
+let parser = new EmailParser('info@ntschool.ru');
 console.log(parser.name);
 console.log(parser.domain);
 console.log(parser.isCorrect);
@@ -18,21 +16,22 @@ document.body.appendChild(div);
 let cleverDiv = watchObj(div, function(prop, val){
     console.log(prop, val);
 });
+
 cleverDiv.innerHTML = '<strong>HTML</strong><em>Changed</em>';
-/*
-    в консоли:
+/* 
+    в консоли: 
     innerHTML <strong>HTML</strong><em>Changed</em
 */
 console.log(cleverDiv.innerHTML);
 cleverDiv.style.color = 'red';
-/*
+/* 
     весь текст стал красным
-    в консоли:
+    в консоли: 
     color red
 */
 
 cleverDiv.querySelector('em').style.color = 'green';
-/*
+/* 
     em стал зелёным
     в консоли ничего не добавилось
 
@@ -40,4 +39,3 @@ cleverDiv.querySelector('em').style.color = 'green';
 */
 
 cleverDiv.classList.add('some');
-document.querySelector('.elem2').classList.add('some');

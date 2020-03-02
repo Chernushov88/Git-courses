@@ -8,6 +8,8 @@ export default class VueGetters{
         for(let name in this.$data){
             Object.defineProperty(this.data, name, {
                 get: () => {
+                    console.log(this.$data);
+                    console.log(this.$data[name]);
                     return this.$data[name];
                 },
                 set: (value) => {

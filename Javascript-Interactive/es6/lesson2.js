@@ -1,13 +1,13 @@
 import 'babel-polyfill';
-
-//import Timer from './timer';
+document.title = '2';
+//import Timer from './lesson2/timer';
 //let timer = new Timer(document.querySelector('.timer1'), 100);
 
 // import * as callBindApply from "./callBindApply";
 // callBindApply;
 
 /*
-import some from './getters';
+import some from './lesson2/getters';
 console.log(some.cnt); // some._private.cnt
 some.cnt = 5; // some.cnt.setter(5) ...
 console.log(some.cnt);
@@ -18,16 +18,16 @@ console.log(some.cnt);
 */
 
 
-import data from './proxy';
+import data from './lesson2/proxy';
 console.log(data.a);
 data.a = 5;
 console.log(data.a);
 data.b = 7;
-console.log(data.b);
+console.log(data.b);Proxy
 
 
-import VueGetters from './vue-getters';
-import VueProxy from './vue-proxy';
+import VueGetters from './lesson2/vue-getters';
+import VueProxy from './lesson2/vue-proxy';
 
 let vg = new VueGetters({
     el: '.elem1',
@@ -40,6 +40,7 @@ let vg = new VueGetters({
 
 document.querySelector('.elem1').addEventListener('click', function(){
     vg.data.clicks++;
+    vp.data.clicks++;
 });
 
 
@@ -58,7 +59,7 @@ document.querySelector('.elem2').addEventListener('click', function(){
 });
 
 /*
-import {watchObj, EmailParser} from './hw';
+import {watchObj, EmailParser} from './lesson2/hw';
 
 let parser = new EmailParser('info@ntschool.ru');
 console.log(parser.name);

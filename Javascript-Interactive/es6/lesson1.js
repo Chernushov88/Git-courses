@@ -1,11 +1,11 @@
 import 'babel-polyfill';
 
-import Timer from './timer';
+import Timer from './lesson1/timer';
 
 /* global require Symbol */
-let counter1 = require('./some.js');
-import * as counter2 from './other.js';
-import {gen, getDischarges} from './gen.js';
+let counter1 = require('./lesson1/some.js');
+import * as counter2 from './lesson1/other.js';
+import {gen, getDischarges} from './lesson1/gen.js';
 
 window.addEventListener('load', function(){
 

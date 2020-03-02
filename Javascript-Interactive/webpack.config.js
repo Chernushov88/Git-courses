@@ -1,8 +1,14 @@
 /* global require __dirname module */
+
 let path = require('path');
 
 let conf = {
-    entry: './es6/scripts.js',
+    entry: './es6/lesson1.js',
+    // entry: './es6/lesson1-hw.js',
+    //entry: './es6/lesson2.js',
+    //entry: './es6/lesson2-hw.js',
+    // entry: './es6/lesson3.js',
+
     output: {
         path: path.resolve(__dirname, './js'),
         filename: 'main.js',
