@@ -1,9 +1,9 @@
 document.title = '3';
 
-import * as BadApi from './lesson3/api-callback';
+//import * as BadApi from './lesson3/api-callback';
 
-import {mathOp} from './lesson3/math';
-
+//import {mathOp} from './lesson3/math';
+/*
 function mathRun(){
     try{
         let a = mathOp(1, 2, '+') + mathOp(1, 0, '/');
@@ -22,8 +22,9 @@ function mathRun(){
 }
 
 mathRun();
-
-
+*/
+///* global Promise */
+/*
 let some = new Promise(function(resolve, reject){
     window.setTimeout(() => {
         let num = Math.random();
@@ -59,11 +60,10 @@ BadApi.userReg((res) => {
 }, (e) => {
     console.log(e.msg);
 });
+*/
 
-
-
+/*
 import * as PromiseApi from './lesson3/api-promise';
-
 PromiseApi.userReg()
           .then((regRes) => {
                 console.log(regRes);
@@ -79,8 +79,8 @@ PromiseApi.userReg()
            .catch((e) => {
                 console.log(e.msg);
            });
+*/
 
-/*
 import 'babel-polyfill';
 
 import * as AsyncApi from './lesson3/api-async';
@@ -104,4 +104,3 @@ UserProccess().then((data) => {
     console.log(err.message);
 });
 
- */

@@ -29,9 +29,25 @@ function userReg(){
             }
         });
     })
-    
 }
+/*
+function userReg(){
+    return new Promise(function(resolve, reject){
+        window.setTimeout(function(){
 
+            if(Math.random() > 0.2){
+                resolve({
+                    msg: "+ registration",
+                    id: 1
+                });
+            }
+            else{
+                reject({msg: "error in registration"});
+            }
+        }, 500);
+    })
+}
+*/
 function userAuth(id){
     return new Promise(function(resolve, reject){
         window.setTimeout(function(){

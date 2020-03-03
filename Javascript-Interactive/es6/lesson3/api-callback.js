@@ -1,5 +1,6 @@
 function userReg(onSuccess, onError){
     window.setTimeout(() => {
+
         if(Math.random() > 0.2){
             onSuccess({
                 msg: "+ registration",
