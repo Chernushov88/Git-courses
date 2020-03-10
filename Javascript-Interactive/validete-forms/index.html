@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>validates form</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css"/>
+        <style>
+            label {
+                width: 100px;
+            }
+            label.error {
+                color: red;
+            }
+            input {
+                border : 1px solid #ccc;
+            }
+            input.error {
+                border-color: red;
+            }
+            .content {
+                padding: 15px;
+                border: 1px solid #ccc;
+            }
+
+        </style>
+    </head>
+    <body>
+        <hr>
+        <div class="timer1"></div>
+        <hr>
+        <div class="elem1"></div>
+        <div class="elem2"></div>
+        <script src="js/main.js"></script>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="content">
+                        <form name="form_1" data-need-validate="1" >
+                            <div>
+                                <label>Email</label>
+                                <input name="email" data-validate="require email" />
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <input name="password" data-validate="require" />
+                            </div>
+                            <div>
+                                <input type="submit" value="login" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
