@@ -1,16 +1,11 @@
-/* global require __dirname module */
-
 let path = require('path');
 
 let conf = {
-    entry:
-    // entry: './es6/lesson1.js',
-    // entry: './es6/lesson1-hw.js',
-    //entry: './es6/lesson2.js',
-    //entry: './es6/lesson2-hw.js',
-    // entry: './es6/lesson3.js',
-//    entry: './es6/lesson3-hw/main.js',
-
+    //entry: './pages/01-querySelector.js',
+    //entry: './pages/02-addEventListener.js',
+    //entry: './pages/03-typeDate.js',
+    //entry: './pages/04-callback.js',
+    entry: './pages/05-context.js',
     output: {
         path: path.resolve(__dirname, './js'),
         filename: 'main.js',
@@ -31,9 +26,9 @@ let conf = {
 };
 
 module.exports = (env, options) => {
-    conf.devtool = options.mode === "production" ? 
-                    false :
-                    "cheap-module-eval-source-map";
+    conf.devtool = options.mode === "production" ?
+        false :
+        "cheap-module-eval-source-map";
 
     return conf;
 };
