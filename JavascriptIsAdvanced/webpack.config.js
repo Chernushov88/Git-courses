@@ -5,7 +5,10 @@ let conf = {
     //entry: './pages/02-addEventListener.js',
     //entry: './pages/03-typeDate.js',
     //entry: './pages/04-callback.js',
-    entry: './pages/05-context.js',
+    //entry: './pages/05-context.js',
+    //entry: './pages/06-class.js',
+    //entry: './pages/07-prototypingInheritance.js',
+    entry: './pages/08-jqueryAjax.js',
     output: {
         path: path.resolve(__dirname, './js'),
         filename: 'main.js',
@@ -32,3 +35,11 @@ module.exports = (env, options) => {
 
     return conf;
 };
+// module.exports = {
+//     plugins: [
+//         new webpack.ProvidePlugin({
+//             $: 'jquery',
+//             jQuery: 'jquery'
+//         }),
+//     ]
+// };
