@@ -46,16 +46,19 @@ function count(){}
 console.log('func', count );
 console.log('func', typeof count );
 console.log('object', typeof [1,2,3] );
-let id = Symbol();
-console.log( 'Symbol', Symbol('id') );
+const bigInt = BigInt(12345678901);
+console.log('bigInt', typeof bigInt );
+let ids = Symbol();
+console.log( 'Symbol', Symbol('ids') );
 
-// Область видимости пеоеменных
+console.log('Область видимости пеоеменных')
+
 var a = 1,
     b = 2;
 console.log('a,b', a,b);
 
 
-var num1 =5,
+var num1 = 5,
     num2 = 4,
     str2 = '3';
 
