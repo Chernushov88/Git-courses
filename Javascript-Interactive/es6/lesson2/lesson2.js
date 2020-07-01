@@ -1,5 +1,19 @@
 import 'babel-polyfill';
-document.title = '2';
+document.title = `Call, apply, bind, карринг
+Стрелочные функции
+Синтаксис классов в ES6 и ES7
+Идеи реактивности данных
+Обычные геттеры и сеттеры
+Proxy - перехват обращения к объекту`;
+
+let div = document.createElement('div');
+document.body.append(div);
+div.innerHTML = `
+<hr>
+<div class="elem1"></div>
+<div class="elem2"></div>
+<hr>`;
+div.setAttribute('id', 'app');
 //import Timer from './lesson2/timer';
 //let timer = new Timer(document.querySelector('.timer1'), 100);
 
@@ -18,16 +32,16 @@ console.log(some.cnt);
 */
 
 
-import data from './lesson2/proxy';
+import data from './proxy';
 console.log(data.a);
 data.a = 5;
 console.log(data.a);
 data.b = 7;
-console.log(data.b);Proxy
+console.log(data.b);
 
 
-import VueGetters from './lesson2/vue-getters';
-import VueProxy from './lesson2/vue-proxy';
+import VueGetters from './vue-getters';
+import VueProxy from './vue-proxy';
 
 let vg = new VueGetters({
     el: '.elem1',

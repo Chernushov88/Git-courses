@@ -1,17 +1,30 @@
-import 'babel-polyfill';
+document.title = `
+Этапы готовности новшеств stage [0, 4]
+Настройка Webpack + Babel
+Настройка VS Code + eslint
+Export и import vs require
+Итераторы и генераторы, Symbol
+Полифилы для новых классов`
+let div = document.createElement('div');
+document.body.append(div);
+div.innerHTML = `
+<hr>
+<div class="timer1"></div>
+<hr>`;
+div.setAttribute('id', 'app');
 
-import Timer from './lesson1/timer';
+import 'babel-polyfill';
+import Timer from './timer';
 
 /* global require Symbol */
-let counter1 = require('./lesson1/some.js');
-import * as counter2 from './lesson1/other.js';
+let counter1 = require('./some.js');
+import * as counter2 from './other.js';
 import {
     gen,
     getDischarges
-} from './lesson1/gen.js';
+} from './gen.js';
 
 window.addEventListener('load', function () {
-
     let timer1 = new Timer(document.querySelector('.timer1'), 10);
     console.log(timer1);
 
@@ -21,8 +34,9 @@ window.addEventListener('load', function () {
     counter1.inc();
     counter1.inc();
     this.console.log(counter1.cnt);
+    this.console.log('counter1 - ', counter1);
+    this.console.log('counter2 - ', counter2);
 
-    this.console.log('counter2 - ', counter2)
     this.console.log(counter2.get());
     counter2.inc();
     counter2.inc();
@@ -30,31 +44,26 @@ window.addEventListener('load', function () {
     this.console.log(counter2.get());
 
     let arr = [100, 200, 300];
-
     for (let num of arr) {
-        this.console.log(num);
+        //this.console.log(num);
     }
-
     for (let num of 'hello') {
-        this.console.log(num);
+        //this.console.log(num);
     }
 
     let forPasport = Symbol();
-
     let user = {
         firstName: 'Name',
         lastName: 'Last',
         [forPasport]: 467382497328473982
     };
-
     for (let key in user) {
         this.console.log(`${key}: ${user[key]}`);
     }
-
     this.console.log(user[forPasport]);
 
     let someObj = {
-        to: 10,
+        to: 3,
         [Symbol.iterator]: function () {
             let current = 0;
             let stop = this.to;
@@ -75,13 +84,11 @@ window.addEventListener('load', function () {
             }
         }
     };
-
     for (let some of someObj) {
-        this.console.log(some);
+        this.console.log('someObj', some);
     }
 
-    let someGen = gen(1, 5);
-
+    let someGen = gen(2, 5);
     for (let some of someGen) {
         this.console.log(some);
     }
@@ -89,7 +96,7 @@ window.addEventListener('load', function () {
     let someNum = 123456789;
 
     for (let num of getDischarges(someNum)) {
-        this.console.log(num);
+        this.console.log('someNum ', num);
     }
 
 });

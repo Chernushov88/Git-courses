@@ -2,7 +2,25 @@ html, body{
     margin: 0;
 }
 
+/*@import url('https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css');*/
+/*@import url('https:///cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css');*/
+
 .some:after{
     content: "(+)";
     margin-left: 10px;
+}
+#field {
+    width: 200px;
+    height: 150px;
+    border: 10px solid black;
+    background-color: #00FF00;
+    overflow: hidden;
+    position: relative;
+}
+#ball{
+    position: absolute;
+    transition: 1s all;
+}
+img {
+    max-width: 100%;
 }

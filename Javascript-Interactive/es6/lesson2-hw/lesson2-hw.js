@@ -1,4 +1,4 @@
-import {watchObj, EmailParser} from './lesson2-hw/hw';
+import {watchObj, EmailParser} from './hw';
 document.title = '2- hw';
 let parser = new EmailParser('info@ntschool.ru');
 console.log(parser.name);
