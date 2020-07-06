@@ -1,12 +1,19 @@
-document.title = '3';
-
-//import * as BadApi from './lesson3/api-callback';
-
-//import {mathOp} from './lesson3/math';
+document.title = `Обработка ошибок и исключений
+- Ужас цепочек из коллбеков
+- Проблема коллбеков и исключений
+- Promise: then, catch
+- Промисификация кода
+- Новые фишки: async, await`;
+/* global Promise */
 /*
+
+import * as BadApi from './api-callback';
+
+import {mathOp} from './math';
+
 function mathRun(){
     try{
-        let a = mathOp(1, 2, '+') + mathOp(1, 0, '/');
+        let a = mathOp(1, 2, '+') + mathOp(1, parseInt(Math.random() * 2), '/');
         console.log(a);
         return a;
     }
@@ -22,9 +29,8 @@ function mathRun(){
 }
 
 mathRun();
-*/
-///* global Promise */
-/*
+
+
 let some = new Promise(function(resolve, reject){
     window.setTimeout(() => {
         let num = Math.random();
@@ -40,7 +46,6 @@ some.then((res) => {
 }, (err) => {
     console.log(err);
 });
-
 
 
 BadApi.userReg((res) => {
@@ -60,10 +65,13 @@ BadApi.userReg((res) => {
 }, (e) => {
     console.log(e.msg);
 });
-*/
 
+*/
 /*
-import * as PromiseApi from './lesson3/api-promise';
+import * as PromiseApi from './api-promise';
+
+console.log(PromiseApi)
+
 PromiseApi.userReg()
           .then((regRes) => {
                 console.log(regRes);
@@ -79,11 +87,13 @@ PromiseApi.userReg()
            .catch((e) => {
                 console.log(e.msg);
            });
+
 */
 
+/* */
 import 'babel-polyfill';
 
-import * as AsyncApi from './lesson3/api-async';
+import * as AsyncApi from './api-async';
 
 async function UserProccess(){
     let regRes = await AsyncApi.userReg();
@@ -94,7 +104,7 @@ async function UserProccess(){
 
     let dataRes = await AsyncApi.userData(authRes.token);
     console.log(dataRes);
-    
+
     return dataRes.data;
 }
 

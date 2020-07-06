@@ -62,7 +62,7 @@ console.log(double2.call(null, 2, 3));
 
 
 
-let double3 = double.bind(some, 3);
+let double3 = double.bind(some, 3 );
 console.log(double3(1, 1));
 
 for(var i = 0; i < 5; i++){

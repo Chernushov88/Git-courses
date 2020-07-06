@@ -10,11 +10,12 @@ let div = document.createElement('div');
 document.body.append(div);
 div.innerHTML = `
 <hr>
+<div class="timer1"></div>
 <div class="elem1"></div>
 <div class="elem2"></div>
 <hr>`;
 div.setAttribute('id', 'app');
-//import Timer from './lesson2/timer';
+//import Timer from './timer';
 //let timer = new Timer(document.querySelector('.timer1'), 100);
 
 // import * as callBindApply from "./callBindApply";
@@ -38,10 +39,13 @@ data.a = 5;
 console.log(data.a);
 data.b = 7;
 console.log(data.b);
+console.log(data.zh);
+data.zh = 'test';
+console.log(data.zh);
 
 
 import VueGetters from './vue-getters';
-import VueProxy from './vue-proxy';
+//import VueProxy from './vue-proxy';
 
 let vg = new VueGetters({
     el: '.elem1',
@@ -58,7 +62,7 @@ document.querySelector('.elem1').addEventListener('click', function(){
 });
 
 
-
+/*
 let vp = new VueProxy({
     el: '.elem2',
     data: {
@@ -67,7 +71,7 @@ let vp = new VueProxy({
     },
     template: `<div><h2>{{ clicks }}</h2>{{ name }}</div>`
 });
-
+*/
 document.querySelector('.elem2').addEventListener('click', function(){
     vp.data.clicks++;
 });

@@ -17,7 +17,7 @@ Object.defineProperty(some, 'cnt', {
         console.log('setter', value);
 
         if(value < this.min){
-            value = 1;
+            value = this.min;
         }
         else if(value >= this.max){
             value = this.max;

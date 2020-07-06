@@ -1,6 +1,13 @@
 /**
  * Глобальная вероятность успеха для удобства тестирования
  */
+const GLOBAL_PROPABILITY = 0.8;
+const BAD_JSON_PROPABILITY = 0.2;
+
+/**
+ * Получить все записи из хранилища
+ * @param {callable} onAnswer Функция, обрабатывающая ответ от сервера в формате JSON
+ */
 export function all(){
     return TimeoutPropabiliry(300, GLOBAL_PROPABILITY).then(() => {
         return serverAnswer(articlesStorage);

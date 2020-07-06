@@ -1,6 +1,6 @@
 import {watchObj, EmailParser} from './hw';
 document.title = '2- hw';
-let parser = new EmailParser('info@ntschool.ru');
+let parser = new EmailParser('infotest@ntschool.ru');
 console.log(parser.name);
 console.log(parser.domain);
 console.log(parser.isCorrect);

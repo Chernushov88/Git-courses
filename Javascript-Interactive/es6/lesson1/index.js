@@ -9,8 +9,11 @@ let div = document.createElement('div');
 document.body.append(div);
 div.innerHTML = `
 <hr>
+<hr>
 <div class="timer1"></div>
-<hr>`;
+<hr>
+<hr>
+`;
 div.setAttribute('id', 'app');
 
 import 'babel-polyfill';
@@ -45,10 +48,10 @@ window.addEventListener('load', function () {
 
     let arr = [100, 200, 300];
     for (let num of arr) {
-        //this.console.log(num);
+        this.console.log(num);
     }
-    for (let num of 'hello') {
-        //this.console.log(num);
+    for (let num of 'hel0lo') {
+        this.console.log(num);
     }
 
     let forPasport = Symbol();
@@ -90,7 +93,7 @@ window.addEventListener('load', function () {
 
     let someGen = gen(2, 5);
     for (let some of someGen) {
-        this.console.log(some);
+        this.console.log('some', some);
     }
 
     let someNum = 123456789;

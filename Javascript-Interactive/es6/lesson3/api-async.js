@@ -25,7 +25,7 @@ async function userAuth(id){
         if(Math.random() > 0.2){
             return {
                 msg: "+ auth " + id,
-                token: "-tokentokentokentoken-"
+                token: "ghegkjhjewhrklwejo"
             };
         }
         else{

@@ -1,5 +1,8 @@
 /* global Proxy*/
 let data = {
+    _private: {
+        nz: 3
+    },
     a: 1,
     b: 2
 };
